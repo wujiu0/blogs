@@ -1,7 +1,7 @@
 ---
 title: JavaScript
 date: 2023-02-25 23:13:21
-tags:
+tags: [JavaScript, 前端]
 ---
 
 ## 常量
@@ -89,7 +89,7 @@ tags:
 
 数组并不是一种单独的类型，也属于 Object 对象的范畴
 
-#### 声明：
+#### 声明
 
 `let arr = [elem1, elem2]`
 
@@ -97,15 +97,15 @@ tags:
 
 - Array.from() 伪数组转换为真数组
 
-* push(元素 1, ..., 元素 n); // 将一个或多个元素添加到数组末尾, 并返回该数组的新长度
+- push(元素 1, ..., 元素 n); // 将一个或多个元素添加到数组末尾, 并返回该数组的新长度
 
-* unshift(元素 1, ..., 元素 n); // 将一个或多个元素添加到数组的开头, 并返回该数组的新长度
+- unshift(元素 1, ..., 元素 n); // 将一个或多个元素添加到数组的开头, 并返回该数组的新长度
 
-* pop(); // 从数组中删除最后一个元素, 并返回该元素的值
+- pop(); // 从数组中删除最后一个元素, 并返回该元素的值
 
-* shift(); // 从数组中删除第一个元素, 并返回该元素的值
+- shift(); // 从数组中删除第一个元素, 并返回该元素的值
 
-* splice(start, deleteCount); // 从指定位置开始删除指定个数元素
+- splice(start, deleteCount); // 从指定位置开始删除指定个数元素
 
   - start:指定修改的开始位置（从 0 计数）
 
@@ -113,21 +113,21 @@ tags:
     可选的。 如果省略则默认从指定的起始位置删
     除到最后
 
-* sort()
+- sort()
 
   ```js
   let arr = [4,2,5,1,3];
   // 升序
   arr.sort(function (a,b) {
-    	return a -b;
+     return a -b;
   });
   // 降序
   arr.sort(funtion (a, b){
-  	return b - a;
+   return b - a;
   })
   ```
 
-* forEach() 可用来遍历数组
+- forEach() 可用来遍历数组
 
   ```js
   arr.forEach(function(currentValue[, index]){ })
@@ -136,13 +136,15 @@ tags:
   - currentValue:当前数组元素
   - index：当前元素索引号
 
-* map() 可以处理数据，并且返回新的数组
+- map() 可以处理数据，并且返回新的数组
 
-  ~~~js
-  arr.map(function(item, index){ return item + 1; })
-  ~~~
+  ```js
+  arr.map(function (item, index) {
+    return item + 1;
+  });
+  ```
 
-* filter() 筛选数组
+- filter() 筛选数组
 
   ```js
   arr.filter(function(currentValue[, index]){ return currentValue > 1; })
@@ -150,7 +152,7 @@ tags:
 
   - 返回值：数组，包含了符合条件的所有元素。如果没有符合条件的元素则返回空数组
 
-* reduce(function(previousValue, currentValue[, currentIndex] [, array]) { /_ … _/ }[, initialValue]) 返回函数累计处理的结果，经常用于求和等
+- reduce(function(previousValue, currentValue[, currentIndex] [, array]) { /_…_/ }[, initialValue]) 返回函数累计处理的结果，经常用于求和等
 
   ```js
   const total = arr.reduce((previousValue, currentValue) => {
@@ -161,38 +163,34 @@ tags:
   - 如果有起始值，则以起始值为准开始累计， 累计值 = 起始值
   - 如果没有起始值， 则累计值以数组的第一个数组元素作为起始值开始累计
   - 后面每次遍历就会用后面的数组元素 累计到累计值里面 （类似求和里面的 sum ）
-  
-* join(str) 用于把数组中的所有元素转换一个字符串
 
-  + str: 数组元素是通过参数里面指定的分隔符进行分隔的
+- join(str) 用于把数组中的所有元素转换一个字符串
 
-* find() 查找元素,
+  - str: 数组元素是通过参数里面指定的分隔符进行分隔的
 
-  + 返回值：返回符合测试条件的第一个数组元素值，
+- find() 查找元素,
+
+  - 返回值：返回符合测试条件的第一个数组元素值，
 
     如果没有符合条件的则返回 undefined
 
-* every() 检测数组所有元素是否都符合指定条件，
+- every() 检测数组所有元素是否都符合指定条件，
 
-  + 如果所有元素都通过检测返回 true，否则返回 false
+  - 如果所有元素都通过检测返回 true，否则返回 false
 
-* some() 检测数组中的元素是否满足指定条件  
+- some() 检测数组中的元素是否满足指定条件
 
-  + 如果数组中有元素满足条件返回 true，否则返回 false
+  - 如果数组中有元素满足条件返回 true，否则返回 false
 
-* concat() 合并两个数组，返回生成新数组
+- concat() 合并两个数组，返回生成新数组
 
-* reverse() 反转数组
+- reverse() 反转数组
 
-
-
-
-
-### 对象：
+### 对象
 
 对象由属性和方法组成。
 
-#### 声明创建：
+#### 声明创建
 
 - 使用字面量
 
@@ -219,7 +217,7 @@ let obj = {
 
 - 使用构造函数
 
-#### 使用：
+#### 使用
 
 - 访问：`对象名.属性名`
 
@@ -331,7 +329,7 @@ function 函数名(参数1 = 0, 参数n = 0) {
   (function () {
     // 函数体
   })();
-  
+
   (function () {
     // 函数体
   })();
@@ -448,7 +446,7 @@ Object.method();
 5. 实例方法 `includes(搜索的字符串[, 检测位置索引号])` 判断一个字符串是否包含在另一个字符串中，根据情况返回 true 或 false
 6. 实例方法 `toUpperCase` 用于将字母转换成大写
 7. 实例方法 `toLowerCase` 用于将就转换成小写
-8. 实例方法 `indexOf`  检测是否包含某字符
+8. 实例方法 `indexOf` 检测是否包含某字符
 9. 实例方法 `endsWith` 检测是否以某字符结尾
 10. 实例方法 `replace` 用于替换字符串，支持正则匹配
 11. 实例方法 `match` 用于查找字符串，支持正则匹配
@@ -693,38 +691,38 @@ Student.protytype.contrustor = Student;
 5. `__proto__`对象原型的意义就在于为对象成员查找机制提供一个方向，或者说一条路线
 6. 可以使用 instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上
 
-## 改变this指向的方法
+## 改变 this 指向的方法
 
-+ call()
+- call()
 
   使用 call 方法调用函数，同时指定被调用函数中 this 的值
 
   `fn.call(thisArg[, arg1, arg2, ...])`
 
-  + thisArg: 在fn函数运行时指定的this值
-  + arg1,arg2: 传递的其他参数
-  + 返回值就是函数的返回值，因为call方法本身就是在调用函数
+  - thisArg: 在 fn 函数运行时指定的 this 值
+  - arg1,arg2: 传递的其他参数
+  - 返回值就是函数的返回值，因为 call 方法本身就是在调用函数
 
-+ apply()
+- apply()
 
-  使用 apply 方法调用函数，同时指定被调用函数中 this 的值 
+  使用 apply 方法调用函数，同时指定被调用函数中 this 的值
 
   `fn.apply(thisArg[, argsArray])`
 
-  + thisArg: 在fn函数运行时指定的this值
-  + argArray: 传递的其他参数，必须包含在数组内
+  - thisArg: 在 fn 函数运行时指定的 this 值
+  - argArray: 传递的其他参数，必须包含在数组内
 
-+ bind()
+- bind()
 
-  bind() 方法不会调用函数。但是能改变函数内部this 指向
+  bind() 方法不会调用函数。但是能改变函数内部 this 指向
 
   `fn.bind(thisArg[, arg1, arg2, ...])`
 
-  + thisArg: 在fn函数运行时指定的this值
-  + arg1,arg2: 传递的其他参数
-  + 返回值：指定的this值和初始化参数改造的原函数拷贝(新函数)
+  - thisArg: 在 fn 函数运行时指定的 this 值
+  - arg1,arg2: 传递的其他参数
+  - 返回值：指定的 this 值和初始化参数改造的原函数拷贝(新函数)
 
-  > 因此当我们只是想改变 this 指向，并且不想调用这个函数的时候，可以使用 bind，比如改变定时器内部的this指向.
+  > 因此当我们只是想改变 this 指向，并且不想调用这个函数的时候，可以使用 bind，比如改变定时器内部的 this 指向.
 
 ## 对象深浅拷贝
 
@@ -736,8 +734,8 @@ Student.protytype.contrustor = Student;
 
 常见方法：
 
-+ 拷贝对象：`Object.assgin()` /展开运算符 {...obj}
-+ 拷贝数组：`Array.prototype.concat()`/ [...arr]
+- 拷贝对象：`Object.assgin()` /展开运算符 {...obj}
+- 拷贝数组：`Array.prototype.concat()`/ [...arr]
 
 如果是简单数据类型拷贝值，引用数据类型拷贝的是地址
 
@@ -749,32 +747,30 @@ Student.protytype.contrustor = Student;
 
 ### 递归实现
 
-~~~js
+```js
 function deepClone(target, src) {
-    for (let key in src) {
-      if (src[key] instanceof Array) {
-        target[key] = [];
-        deepClone(target[key], src[key]);
-      } else if (src[key] instanceof Object) {
-        target[key] = {};
-        deepClone(target[key], src[key]);
-      } else {
-        console.log(key);
-        target[key] = src[key];
-      }
+  for (let key in src) {
+    if (src[key] instanceof Array) {
+      target[key] = [];
+      deepClone(target[key], src[key]);
+    } else if (src[key] instanceof Object) {
+      target[key] = {};
+      deepClone(target[key], src[key]);
+    } else {
+      console.log(key);
+      target[key] = src[key];
     }
+  }
 }
-~~~
+```
 
-### 通过JSON转换方式实现
+### 通过 JSON 转换方式实现
 
-~~~js
+```js
 JSON.parse(JSON.stringify(obj));
-~~~
+```
 
 > 拷贝函数类型会出错
-
-
 
 ## 节流和防抖
 
@@ -785,33 +781,33 @@ JSON.parse(JSON.stringify(obj));
 
 ### 使用场景
 
-+ 节流: 鼠标移动，页面尺寸发生变化，滚动条滚动等开销比较
+- 节流: 鼠标移动，页面尺寸发生变化，滚动条滚动等开销比较
   大的情况下
 
-+ 防抖: 搜索框输入，设定每次输入完毕n秒后发送请求，如果期
+- 防抖: 搜索框输入，设定每次输入完毕 n 秒后发送请求，如果期
   间还有输入，则从新计算时间
 
 ```js
 function debounce(func, wait) {
-    let timer;
-    return function (...args) {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-            func.apply(this, args);
-        }, wait);
-    };
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, wait);
+  };
 }
 
 function throttle(func, wait) {
-    let timer;
-    return function (...args) {
-        if (!timer) {
-            timer = setTimeout(() => {
-                func.apply(this, args);
-                timer = null;
-            }, wait);
-        }
-    };
+  let timer;
+  return function (...args) {
+    if (!timer) {
+      timer = setTimeout(() => {
+        func.apply(this, args);
+        timer = null;
+      }, wait);
+    }
+  };
 }
 ```
 

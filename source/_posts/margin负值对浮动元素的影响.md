@@ -2,6 +2,7 @@
 title: margin负值对浮动元素的影响
 typora-root-url: margin负值对浮动元素的影响
 date: 2023-06-06 16:39:01
+tags: [前端, CSS]
 ---
 
 **盒子总体宽度 = css 设置的 width（内容区域宽度）+ 左右 padding + 左右 border + 左右 margin。**

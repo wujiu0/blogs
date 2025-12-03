@@ -2,6 +2,7 @@
 title: vue
 typora-root-url: vue
 date: 2023-04-10 16:53:05
+tags: [Vue, 前端]
 ---
 
 ## Vue 与 VueComponent 的关系
@@ -14,8 +15,8 @@ date: 2023-04-10 16:53:05
 
 ### 父子组件生命周期执行顺序
 
-父beforeCreate -> 父created -> 父beforeMount -> 
-子beforeCreate -> 子created -> 子beforeMount -> 子mounted -> 
+父beforeCreate -> 父created -> 父beforeMount ->
+子beforeCreate -> 子created -> 子beforeMount -> 子mounted ->
 父mounted->父beforeUpdate->
 子beforeUpdate->子updated->
 父updated->父beforeDestroy->
@@ -404,7 +405,7 @@ module.exports = {
                   <template slot="center">
                     <div>html结构1</div>
                   </template>
-      
+
                   <template v-slot:footer>
                      <div>html结构2</div>
                   </template>
@@ -435,7 +436,7 @@ module.exports = {
                      </ul>
                   </template>
                </Category>
-         
+
          <Category>
                   <template slot-scope="scopeData">
                      <!-- 生成的是h4标题 -->
@@ -448,7 +449,7 @@ module.exports = {
              <slot :games="games"></slot>
            </div>
          </template>
-         
+
          <script>
          export default {
            name: 'Category',
@@ -464,7 +465,7 @@ module.exports = {
          ```
 
    ```
-   
+
    ```
 
 ## Vuex
@@ -513,7 +514,7 @@ module.exports = {
    //引入store
    import store from './store'
    ......
-   
+
    //创建vm
    new Vue({
       el:'#app',
@@ -637,7 +638,7 @@ module.exports = {
    methods:{
        //靠mapActions生成：increment、decrement（对象形式）
        ...mapMutations({increment:'JIA',decrement:'JIAN'}),
-   
+
        //靠mapMutations生成：JIA、JIAN（对象形式）
        ...mapMutations(['JIA','JIAN']),
    }
@@ -866,10 +867,10 @@ module.exports = {
       ```vue
       <!--简化前，需要写完整的路径 -->
       <router-link to="/demo/test/welcome">跳转</router-link>
-      
+
       <!--简化后，直接通过名字跳转 -->
       <router-link :to="{ name: 'hello' }">跳转</router-link>
-      
+
       <!--简化写法配合传递参数 -->
       <router-link
         :to="{
@@ -917,14 +918,14 @@ module.exports = {
    }
    ~~~
 
-   
+
 
 2. 传递参数
 
    ```vue
    <!-- 跳转并携带params参数，to的字符串写法 -->
    <router-link :to="/home/message/detail/666/你好">跳转</router-link>
-   
+
    <!-- 跳转并携带params参数，to的对象写法 -->
    <router-link
      :to="{
@@ -995,7 +996,7 @@ module.exports = {
        title: xxx,
      },
    });
-   
+
    this.$router.replace({
      name: 'xiangqing',
      params: {
@@ -1015,7 +1016,7 @@ module.exports = {
 2. 具体编码：
 
    ```vue
-   <keep-alive include="News"> 
+   <keep-alive include="News">
        <router-view></router-view>
    </keep-alive>
    ```

@@ -31,6 +31,6 @@ tags:
 | git stash apply [--index] [-q \| --quiet] [<stash>] | 取出之前储藏的修改（不从列表中删除）                     |
 | git stash drop [-q \| --quiet] [<stash>]            | 将指定储藏从储藏记录列表中删除                           |
 
-## ssh免密登陆
+## ssh 免密登陆
 
 `ssh-keygen -t rsa -C 123@qq.com`

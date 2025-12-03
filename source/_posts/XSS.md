@@ -1,12 +1,12 @@
 ---
 title: XSS
 date: 2021-01-16 19:30:21
-tags: [web安全, XSS]
+tags: [安全, XSS]
 ---
 
 ## XSS
 
-跨站脚本攻击,  
+跨站脚本攻击,
 网页内嵌入 HTML,CSS,js 代码
 
 ## 分类

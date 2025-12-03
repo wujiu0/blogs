@@ -1,7 +1,7 @@
 ---
 title: sqlmap使用
 date: 2021-01-16 19:24:32
-tags: [web安全,sql注入]
+tags: [安全,sql注入]
 ---
 
 -u 检测存在可利用漏洞

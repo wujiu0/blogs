@@ -12,7 +12,7 @@ tags:
 var variable = {"key1":value1,
                 "key2":value2,
                 ……
-				};
+    };
 ```
 
 示例：
@@ -21,7 +21,7 @@ var variable = {"key1":value1,
 var json = {"name":"zhangsan",
             "age":23,
             "addr":["北京","上海","西安"]
-			};
+   };
 ```
 
 ## value 的数据类型：

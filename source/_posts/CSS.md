@@ -2,7 +2,7 @@
 title: CSS
 typora-root-url: CSS
 date: 2023-02-20 00:34:20
-tags:
+tags: [前端, CSS]
 ---
 
 [toc]
@@ -167,8 +167,7 @@ div{ color:green; }
     一般页面中的非主体内容可以使用伪元素
 
     ```html
-    :before 在父元素内容的最前添加一个伪元素 :after
-    在父元素内容的最后添加一个伪元素
+    :before 在父元素内容的最前添加一个伪元素 :after 在父元素内容的最后添加一个伪元素
     ```
 
     > - 必须设置 content 属性才能生效
@@ -270,11 +269,11 @@ div{ color:green; }
 
 ### 列表
 
-+ list-style-type 列表标志符号
-+ list-style-position 设置列表标志出现的位置
-+ list-style-image 自定义列表标志想
+- list-style-type 列表标志符号
+- list-style-position 设置列表标志出现的位置
+- list-style-image 自定义列表标志想
 
-- list-style 列表简写（type image position）
+* list-style 列表简写（type image position）
 
 ### 图片
 
@@ -299,9 +298,9 @@ div{ color:green; }
 
 ### 元素本身隐藏
 
-- visibility: hidden （占位置，js事件不生效）
-- display: none （不占位置，js事件不生效）
-- opacity: 0 (占位置，js事件生效) 
+- visibility: hidden （占位置，js 事件不生效）
+- display: none （不占位置，js 事件不生效）
+- opacity: 0 (占位置，js 事件生效)
 
 ### 文字阴影
 
@@ -820,19 +819,15 @@ opacity: 数字（0~1）;
 
 > 开发中推荐多用类 + 后代，但不是层级越多越好，一个选择器中的类选择器的个数推荐 不要超过 3 个
 
-
-
 ## 视口
 
-显示HTML网页的区域，用来约束HTML尺寸
+显示 HTML 网页的区域，用来约束 HTML 尺寸
 
-默认网页宽度是980px
+默认网页宽度是 980px
 
-iPhone6/7/8，设备宽度375px产出设计稿，二倍图设计稿尺寸：750px。
+iPhone6/7/8，设备宽度 375px 产出设计稿，二倍图设计稿尺寸：750px。
 
-
-
-## Flex布局/弹性布局：
+## Flex 布局/弹性布局：
 
 基于 Flex 精确灵活控制块级盒子的布局方式，避免浮动布局中脱离文档流现象发生。非常适合结构化布局
 
@@ -842,10 +837,10 @@ iPhone6/7/8，设备宽度375px产出设计稿，二倍图设计稿尺寸：750p
 
 ### 组成部分
 
-+ 弹性容器
-+ 弹性盒子
-+ 主轴
-+ 交叉轴/侧轴
+- 弹性容器
+- 弹性盒子
+- 主轴
+- 交叉轴/侧轴
 
 ![image-20230424012454884](./image-20230424012454884.png)
 
@@ -893,12 +888,12 @@ iPhone6/7/8，设备宽度375px产出设计稿，二倍图设计稿尺寸：750p
 
 #### 复合属性
 
-`flex`按顺序复合flex-grow, flex-shrink, flex-basis，默认值为 0 1 auto 
+`flex`按顺序复合 flex-grow, flex-shrink, flex-basis，默认值为 0 1 auto
 
-+ flex: auto => flex:  1 1 auto
-+ flex: 1 => flex: 1 1 0
-+ flex: none => flex: 0 0 auto
-+ flex: 0 auto => flex: 0 1 auto  (即默认值)
+- flex: auto => flex: 1 1 auto
+- flex: 1 => flex: 1 1 0
+- flex: none => flex: 0 0 auto
+- flex: 0 auto => flex: 0 1 auto (即默认值)
 
 ### 主轴方向
 

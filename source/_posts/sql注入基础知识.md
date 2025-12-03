@@ -1,7 +1,7 @@
 ---
 title: sql注入基础知识
 date: 2021-03-22 17:43:30
-tags: [web安全, sql注入]
+tags: [安全, sql注入]
 ---
 
 - database() 当前数据库名
@@ -12,22 +12,22 @@ tags: [web安全, sql注入]
 
 - 联合查询(列数必须相等).select \* from users where id ='-1'union select 1,2,3 ----左边查询没结果(没有这个 id),右边结果 1,2,3
 
-- 连接字符串  
-   concat 普通拼接  
-  concat_ws('\~',1,2) 第一位是连接符  
+- 连接字符串
+   concat 普通拼接
+  concat_ws('\~',1,2) 第一位是连接符
   group_concat(1\~2)
 
-- information_schema  
-  简单的信息数据库  
+- information_schema
+  简单的信息数据库
   里面都是视图,不是表,
 
-  schemata ==>数据库信息  
+  schemata ==>数据库信息
    schema_name 数据库名称
 
-  tables ==>数据库和表的关系  
+  tables ==>数据库和表的关系
    table_name 表名
 
-  columns ==>表和列的关系  
+  columns ==>表和列的关系
    column_name 列名
 
 length(database())= 数据库名长度

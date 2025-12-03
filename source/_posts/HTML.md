@@ -41,7 +41,7 @@ tags: [前端]
 
 - ##### ~~标签属性\<font 属性名="属性值" 属性名="属性值">~~ **_<font color="red">使用 CSS</font>_**
 
-  ~~可以通过属性来设置标签,在开始标签中添加属性  
+  ~~可以通过属性来设置标签,在开始标签中添加属性
   设置多个属性时,需要使用空格隔开~~
 
 - ##### 元素
@@ -95,8 +95,8 @@ tags: [前端]
 
 ## 实体
 
-在 html 中,一些如<>这种的特殊字符不能直接使用的,需要使用特殊符号来表示这些特殊字符,称为实体(转义字符串)  
-浏览器解析到实体时,会自动将实体转换为其对应的字符  
+在 html 中,一些如<>这种的特殊字符不能直接使用的,需要使用特殊符号来表示这些特殊字符,称为实体(转义字符串)
+浏览器解析到实体时,会自动将实体转换为其对应的字符
 对大小写敏感
 
 ```html
@@ -105,7 +105,7 @@ tags: [前端]
 
 
 
-&lt <  
+&lt <
 &gt >
 &nbsp 空格
 &copy 版权符号
@@ -125,10 +125,10 @@ tags: [前端]
 
 - 属性
 
-  - src:设置一个外部图片的路径,目前我们所要使用的路径全都是相对路径(_指相对于当前资源所在目录的位置_).  
+  - src:设置一个外部图片的路径,目前我们所要使用的路径全都是相对路径(_指相对于当前资源所在目录的位置_).
      可以使用../来返回上一级目录
-  - alt:可以设置在图片不能显示时,对图片的描述  
-     搜索引擎可以通过 alt 属性来识别不同的图片  
+  - alt:可以设置在图片不能显示时,对图片的描述
+     搜索引擎可以通过 alt 属性来识别不同的图片
      如果不写 alt 属性,搜索引擎不会对 img 中的图片进行收录
   - title:提示文本，当鼠标悬停时才显示的文本
 
@@ -136,7 +136,7 @@ tags: [前端]
 
   - width:可以用来修改图片的宽度,一般使用 px 作为单位
 
-  - height:可以用来修改图片的高度  
+  - height:可以用来修改图片的高度
      宽度和高度两个属性如果只设置一个,另一个也会同时等比例调整大小
     一般开发中,除了自适应的页面,不建议设置 width 和 height
 
@@ -154,7 +154,7 @@ tags: [前端]
 
 - 图片的使用原则
 
-  效果不一致,使用效果好的  
+  效果不一致,使用效果好的
   效果一致,使用小的
 
 ```html
@@ -371,14 +371,14 @@ tags: [前端]
       2.请求参数大小没有限制
 
       3:较为安全
-    
+
   - enctype:
 
-    + multipart/form-data
+    - multipart/form-data
 
       涉及文件上传，必须设置此项
 
-    + application/x-www-form-urlencoded
+    - application/x-www-form-urlencoded
 
 - 表单项标签
 
@@ -430,21 +430,13 @@ tags: [前端]
 ```html
 <form action="#" method="get">
   <label for="username">用户名</label>:
-  <input
-    type="text"
-    name="username"
-    placeholder="请输入用户名"
-    id="username"
-  /><br />
-  <label for="password">密码</label>:
-  <input type="password" name="password" placeholder="请输入密码" /><br />
+  <input type="text" name="username" placeholder="请输入用户名" id="username" /><br />
+  <label for="password">密码</label>: <input type="password" name="password" placeholder="请输入密码" /><br />
   性别:
-  <input type="radio" name="gender" value="male" checked />男
-  <input type="radio" name="gender" value="famale" />女
+  <input type="radio" name="gender" value="male" checked />男 <input type="radio" name="gender" value="famale" />女
   <br />
   爱好:
-  <input type="checkbox" name="hobby" value="shopping" />购物
-  <input type="checkbox" name="hobby" value="game" />游戏
+  <input type="checkbox" name="hobby" value="shopping" />购物 <input type="checkbox" name="hobby" value="game" />游戏
   <input type="checkbox" name="hobby" value="Java" checked />Java
   <br />
   照片:

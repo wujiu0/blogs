@@ -1,7 +1,7 @@
 ---
 title: php伪协议
 date: 2021-01-04
-tags: web安全
+tags: 安全
 ---
 
 ## php 伪协议
@@ -28,8 +28,8 @@ _需要首先将 php.ini 中的 allwo_url_fopen 和 allow_url_include 设置为 
   php://filter/read=convert.base64-encode/resource=flag.php
   ```
 
-  convert.base64-encode 就是一个过滤器,flag.php 就是要过滤的数据流.  
-  转换过滤器 convert._  
+  convert.base64-encode 就是一个过滤器,flag.php 就是要过滤的数据流.
+  转换过滤器 convert._
   字符串过滤器 string._ 用于对字符串进行各类转换(加密,转换大小写等)
 
   **语法**

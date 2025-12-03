@@ -2,7 +2,7 @@
 title: 关于js立即执行函数为什么必须加分号
 typora-root-url: 关于js立即执行函数为什么必须加分号
 date: 2023-03-01 19:16:46
-tags:
+tags: [JavaScript]
 ---
 
 ·

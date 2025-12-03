@@ -517,8 +517,6 @@ const date = new Date();
 | toLocaleString()     |                | 2000/1/1 00:00:00                                            |
 | toLocaleDateString() |                | 2000/1/1                                                     |
 
-
-
 ## BOM
 
 BOM(Browser Object Model) 浏览器对象模型
@@ -527,13 +525,13 @@ BOM(Browser Object Model) 浏览器对象模型
 
 ### window
 
-window对象是一个全局对象，也可以说是JavaScript中的顶级对象
+window 对象是一个全局对象，也可以说是 JavaScript 中的顶级对象
 
-像document、alert()、console.log()这些都是window的属性，基本BOM的属性和方法都是window的。
+像 document、alert()、console.log()这些都是 window 的属性，基本 BOM 的属性和方法都是 window 的。
 
-所有通过var定义在全局作用域中的变量、函数都会变成window对象的属性和方法
+所有通过 var 定义在全局作用域中的变量、函数都会变成 window 对象的属性和方法
 
-window对象下的属性和方法调用的时候可以省略window
+window 对象下的属性和方法调用的时候可以省略 window
 
 ### location
 
@@ -541,43 +539,42 @@ location 对象拆分并保存了 URL 地址的各个组成部分
 
 #### 常用属性和方法
 
-+ href 属性获取完整的 URL 地址，对其赋值时用于地址的跳转
-+ search 属性获取地址中携带的参数，符号 ？后面部分
-+ hash 属性获取地址中的啥希值，符号 # 后面部分
-+ reload 方法用来刷新当前页面，传入参数 true 时表示强制刷新
+- href 属性获取完整的 URL 地址，对其赋值时用于地址的跳转
+- search 属性获取地址中携带的参数，符号 ？后面部分
+- hash 属性获取地址中的啥希值，符号 # 后面部分
+- reload 方法用来刷新当前页面，传入参数 true 时表示强制刷新
 
 ### navigator
 
-navigator对象下记录了浏览器自身的相关信息
+navigator 对象下记录了浏览器自身的相关信息
 
 #### 常用属性和方法
 
-+ userAgent 检测浏览器的版本及平台
+- userAgent 检测浏览器的版本及平台
 
-  ~~~js
+  ```js
   // 检测 userAgent（浏览器信息）
-          !(function () {
-              const userAgent = navigator.userAgent
-              // 验证是否为Android或iPhone
-              const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
-              const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
-              // 如果是Android或iPhone，则跳转至移动站点
-              if (android || iphone) {
-                  location.href = 'http://m.itcast.cn'
-              }
-          })()
-  
-  ~~~
+  !(function () {
+    const userAgent = navigator.userAgent;
+    // 验证是否为Android或iPhone
+    const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/);
+    const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/);
+    // 如果是Android或iPhone，则跳转至移动站点
+    if (android || iphone) {
+      location.href = 'http://m.itcast.cn';
+    }
+  })();
+  ```
 
 ### history
 
-history对象主要管理历史记录， 该对象与浏览器地址栏的操作相对应，如前进、后退、历史记录等
+history 对象主要管理历史记录， 该对象与浏览器地址栏的操作相对应，如前进、后退、历史记录等
 
 #### 常用方法
 
-+ back() 后退功能
-+ forward() 前进功能
-+ go(参数) 前进后退功能（参数如果是1前进，如果是-1后退一个页面）
+- back() 后退功能
+- forward() 前进功能
+- go(参数) 前进后退功能（参数如果是 1 前进，如果是-1 后退一个页面）
 
 ### localStorage
 
@@ -585,37 +582,37 @@ history对象主要管理历史记录， 该对象与浏览器地址栏的操作
 
 #### 特性
 
-+ 可以多窗口（页面）共享（同一浏览器可以共享）
-+ 以键值对的形式存储使用
+- 可以多窗口（页面）共享（同一浏览器可以共享）
+- 以键值对的形式存储使用
 
 #### 方法
 
-+ 存储数据：
+- 存储数据：
 
-  ~~~js
+  ```js
   localStorage.setItem(key, value);
-  ~~~
+  ```
 
-+ 获取数据
+- 获取数据
 
-  ~~~js
+  ```js
   localStorage.getItem(key);
-  ~~~
+  ```
 
-+ 删除数据
+- 删除数据
 
-  ~~~js
+  ```js
   localStorage.removeItem(key);
-  ~~~
+  ```
 
 ### sessionStorage
 
 #### 特性
 
-+ 生命周期为关闭浏览器窗口
-+ 在同一个窗口(页面)下数据可以共享
-+ 以键值对的形式存储使用
-+ 用法跟localStorage 基本相同
+- 生命周期为关闭浏览器窗口
+- 在同一个窗口(页面)下数据可以共享
+- 以键值对的形式存储使用
+- 用法跟 localStorage 基本相同
 
 ## 重绘和回流
 
