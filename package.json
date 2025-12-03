@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build:github": "hexo generate",
-    "build:local": "hexo generate --config _config.yml,_config_local.yml",
+    "build:github": "hexo clean && hexo generate",
+    "build:local": "hexo clean && hexo generate --config _config.yml,_config_local.yml",
     "postbuild:local": "node ./NpmScripts/postbuild.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
