@@ -448,7 +448,6 @@ libs:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
-  - /medias/featureimages/0.jpg
   - /medias/featureimages/1.jpg
   - /medias/featureimages/2.jpg
   - /medias/featureimages/3.jpg
@@ -500,7 +499,6 @@ featureImages:
   - /medias/featureimages/49.jpg
   - /medias/featureimages/50.jpg
   - /medias/featureimages/51.jpg
-  - /medias/featureimages/52.jpg
   - /medias/featureimages/53.jpg
   - /medias/featureimages/54.jpg
   - /medias/featureimages/55.jpg
