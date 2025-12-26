@@ -2,7 +2,8 @@
 const fs = require('fs');
 
 const INPUT_DIR = 'public/';
-const OUTPUT_DIR = '/opt/homebrew/var/www/blogs/';
+// 读取环境变量中的 WEB_ROOT，如果没有则默认 $HOME/www
+const OUTPUT_DIR = process.env.WEB_ROOT ? `${process.env.WEB_ROOT}/blogs/` : `${process.env.HOME}/www/blogs/`;
 
 // function copyRecursive(src, dest) {
 //   const entries = fs.readdirSync(src, { withFileTypes: true });
