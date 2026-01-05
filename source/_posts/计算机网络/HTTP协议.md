@@ -1,6 +1,5 @@
 ---
-title: HTTP协议中的请求消息与响应消息
-typora-root-url: HTTP
+title: HTTP协议
 date: 2022-03-08 23:19:23
 tags: [HTTP, 网络, 协议]
 ---

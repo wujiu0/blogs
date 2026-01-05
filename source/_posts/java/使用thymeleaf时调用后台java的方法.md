@@ -1,15 +1,10 @@
 ---
 title: 使用thymeleaf时调用后台java的方法
-typora-root-url: 使用thymeleaf时调用后台java的方法
 date: 2022-10-19 20:23:22
-tags: 
+tags:
 ---
 
-
-
-
-
-1. 首先需要将需要调用方法的对象交由spring容器管理
+1. 首先需要将需要调用方法的对象交由 spring 容器管理
 
    这样
 

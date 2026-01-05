@@ -1,6 +1,5 @@
 ---
 title: HTTP 协议各个版本演进
-typora-root-url: HTTP 协议各个版本演进
 date: 2025-12-03 22:45:54
 tags: [HTTP, 网络, 协议]
 ---
